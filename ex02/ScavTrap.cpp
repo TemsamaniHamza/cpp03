@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string nm) : ClapTrap(nm){
+ScavTrap::ScavTrap(std::string nm) : ClapTrap(nm) {
     name = nm;
     hit_points = 100;
     energy_points = 50;
