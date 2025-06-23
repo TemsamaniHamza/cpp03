@@ -19,5 +19,6 @@ int main() {
     notbob.attack("Target");
     notbob.takeDamage(30);
     notbob.beRepaired(20);
+    notbob.highFivesGuys();
     return 0;
 }

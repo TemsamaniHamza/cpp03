@@ -20,14 +20,21 @@ ScavTrap::~ScavTrap(){
 };
 
 ScavTrap::ScavTrap(const ScavTrap& copy){
-    return ;
+    std::cout << "copy constructo called" << std::endl;
+    *this = copy;
 };
 
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& cp)
 {
-    return *this;
-};
+    std::cout << "copy assignmenet operator called " << std::endl;
+    if(this != &cp)
+    {
+        this->hit_points = cp.hit_points;
+        this->energy_points = cp.hit_points;
+        this->attack_damage = cp.hit_points;
+    }
+    return *this;};
 
 void ScavTrap::attack(const std::string& target){
     if(this->hit_points <= 0 || this->energy_points <= 0)
